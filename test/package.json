@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx gitlab2sq sample/gl-sast-report.json --target sample/sonarqube-issue-report.json"
+  },
+  "dependencies": {
+    "gitlab-sast-to-sonarqube": ".."
+  },
+  "author": "",
+  "license": "ISC"
+}

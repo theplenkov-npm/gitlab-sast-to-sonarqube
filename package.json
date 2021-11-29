@@ -1,0 +1,33 @@
+{
+  "name": "gitlab-sast-to-sonarqube",
+  "version": "1.0.0",
+  "description": "Command to convert Gitlab SAST report to SonarQube external issue report",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "schema:download": "wget https://gitlab.com/gitlab-org/security-products/security-report-schemas/-/raw/master/dist/sast-report-format.json --directory-prefix=src/type/gitlab",
+    "schema:generate": "npx json2ts src/type/gitlab/sast-report-format.json > src/types/gitlab/sast-report-format.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theplenkov-npm/gitlab-sast-to-sonarqube.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theplenkov-npm/gitlab-sast-to-sonarqube/issues"
+  },
+  "homepage": "https://github.com/theplenkov-npm/gitlab-sast-to-sonarqube#readme",
+  "devDependencies": {
+    "json-schema-to-typescript": "^10.1.5"
+  },
+  "dependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "commander": "^8.3.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "bin": {
+    "gitlab2sq": "./src/commands/gitlab2sq-cmd.ts"
+  }
+}

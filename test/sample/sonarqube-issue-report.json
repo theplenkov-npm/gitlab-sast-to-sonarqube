@@ -1,0 +1,18 @@
+{
+	"issues": [
+		{
+			"type": "VULNERABILITY",
+			"engineId": "eslint",
+			"ruleId": "Variable Assigned to Object Injection Sink",
+			"primaryLocation": {
+				"message": "Variable Assigned to Object Injection Sink",
+				"filePath": "webapp/utils/locate-reuse-libs.js",
+				"textRange": {
+					"startLine": 92,
+					"endLine": 92
+				}
+			},
+			"severity": "CRITICAL"
+		}
+	]
+}

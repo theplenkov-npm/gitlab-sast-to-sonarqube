@@ -1,0 +1,54 @@
+{
+    "version": "14.0.0",
+    "vulnerabilities": [
+        {
+            "id": "f868bd64258ab702a0dec787805e05dc4b13d7a6be944fb36312c90f1dff2a1c",
+            "category": "sast",
+            "name": "Variable Assigned to Object Injection Sink",
+            "message": "Variable Assigned to Object Injection Sink",
+            "description": "Bracket object notation with user input is present, this might allow an attacker to access all properties of the object and even it's prototype, leading to possible code execution.",
+            "cve": "webapp/utils/locate-reuse-libs.js:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855:security/detect-object-injection",
+            "severity": "Critical",
+            "confidence": "Unknown",
+            "scanner": {
+                "id": "eslint",
+                "name": "ESLint"
+            },
+            "location": {
+                "file": "webapp/utils/locate-reuse-libs.js",
+                "start_line": 92,
+                "end_line": 92
+            },
+            "identifiers": [
+                {
+                    "type": "eslint_rule_id",
+                    "name": "ESLint rule ID security/detect-object-injection",
+                    "value": "security/detect-object-injection",
+                    "url": "https://github.com/nodesecurity/eslint-plugin-security#detect-object-injection"
+                },
+                {
+                    "type": "cwe",
+                    "name": "CWE-94",
+                    "value": "94",
+                    "url": "https://cwe.mitre.org/data/definitions/94.html"
+                }
+            ]
+        }
+    ],
+    "remediations": [],
+    "scan": {
+        "scanner": {
+            "id": "eslint",
+            "name": "ESLint",
+            "url": "https://github.com/nodesecurity/eslint-plugin-security",
+            "vendor": {
+                "name": "GitLab"
+            },
+            "version": "7.32.0"
+        },
+        "type": "sast",
+        "start_time": "2021-11-26T19:23:47",
+        "end_time": "2021-11-26T19:23:48",
+        "status": "success"
+    }
+}
