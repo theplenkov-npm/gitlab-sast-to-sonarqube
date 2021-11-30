@@ -1,6 +1,6 @@
 {
   "name": "gitlab-sast-to-sonarqube",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Command to convert Gitlab SAST report to SonarQube external issue report",
   "main": "index.js",
   "scripts": {
